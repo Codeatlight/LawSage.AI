@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LawSage AI - Your Legal Ally</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('home') }}" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="LawSage Logo">
+                <span class="logo-text">LawSage AI</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Safety</a></li>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Contacts</a></li>
+                {% if current_user.is_authenticated %}
+                    <li><a href="{{ url_for('logout') }}" class="sign-in">Logout</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('login') }}" class="sign-in">Sign In</a></li>
+                    <li><a href="{{ url_for('signup') }}" class="register">Register</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Ask LawSage Anything</h1>
+                <p class="hero-subtitle">Trust Your Law Buddy</p>
+                <p class="hero-description">Get instant answers to your legal questions powered by India's largest legal database</p>
+                <div class="hero-actions">
+                    <button type="button" class="hero-btn primary" onclick="location.href='{{ url_for('chat') }}'">
+                        <i class="fas fa-comments"></i> Start Chatting
+                    </button>
+                    <button type="button" class="hero-btn secondary" onclick="location.href='{{ url_for('summary') }}'">
+                        <i class="fas fa-file-alt"></i> Summarize Document
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="section-header">
+                <h2>Our Web Application is trained on large corpus of India's Legal Data</h2>
+                <p class="section-description">We have gathered relevant data from legal documents, case laws, statutes, and legal literature from publicly available sources, legal databases, and repositories.</p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Research</h3>
+                    <p>API - Published LawSage results</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>For Businesses</h3>
+                    <p>Explore all sectors and compare legal cases.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>For Developers</h3>
+                    <p>Integrated into structured disputes via API</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Stories</h3>
+                    <p>How LawSage helps students and legal professionals</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3>News</h3>
+                    <p>The GoI improves legal knowledge via LawSage</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>LawSage</h3>
+                    <p>Boost your legal help with expert insight and simplicity</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summarization Section -->
+        <section class="summarization">
+            <div class="summarization-content">
+                <div class="summarization-icon">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+                <h2>Well! It's not what we only offer.</h2>
+                <h3>Try our Legal Document Summarization</h3>
+                <p>Legal documents are often lengthy, complex, and filled with jargon that makes them inaccessible to non-experts. We have a solution: upload your document and get its summary in simple words.</p>
+                <button class="summarize-btn" onclick="location.href='{{ url_for('summary') }}'">
+                    <i class="fas fa-upload"></i> Legal Document Summarization
+                </button>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="key-features">
+            <h2>Why Choose LawSage AI?</h2>
+            <div class="key-features-grid">
+                <div class="key-feature-item">
+                    <div class="key-feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Bank-Grade Security</h3>
+                    <p>Your documents and data are protected with enterprise-level security</p>
+                </div>
+                <div class="key-feature-item">
+                    <div class="key-feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI-Powered Analysis</h3>
+                    <p>Advanced AI algorithms trained on India's legal corpus</p>
+                </div>
+                <div class="key-feature-item">
+                    <div class="key-feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Actionable Insights</h3>
+                    <p>Get clear, actionable insights from complex legal documents</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Terms & Policies</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Our Charter</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Terms of use</a></li>
+                    <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="#">LawSage Overview</a></li>
+                    <li><a href="{{ url_for('summary') }}">Legal Document Summarization</a></li>
+                    <li><a href="#">Stories</a></li>
+                    <li><a href="#">For Everyone</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Best Practices</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">API Login</a></li>
+                    <li><a href="#">Developers</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LawSage AI. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

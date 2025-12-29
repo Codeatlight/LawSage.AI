@@ -1,0 +1,100 @@
+# =========================
+# Python cache & bytecode
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =========================
+# Virtual environments
+# =========================
+.env
+.venv/
+env/
+venv/
+
+# =========================
+# Logs & runtime files
+# =========================
+*.log
+*.out
+*.err
+
+# =========================
+# Database files (local only)
+# =========================
+*.sqlite
+*.sqlite3
+*.db
+
+# =========================
+# ML / Model artifacts (VERY IMPORTANT)
+# =========================
+models/
+checkpoints/
+*.bin
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# =========================
+# Uploads / user data (runtime)
+# =========================
+uploads/*
+!uploads/.gitkeep
+
+# =========================
+# Node / frontend
+# =========================
+node_modules/
+dist/
+build/
+
+# Ignore frontend static dataset folder
+/frontend/static/dataset/IN-Abs/
+
+# =========================
+# Secrets / Keys (CRITICAL)
+# =========================
+*.pem
+*.key
+*.crt
+*.csr
+*.pfx
+id_rsa
+id_ed25519
+
+# =========================
+# IDE / Editor configs
+# =========================
+.vscode/
+.idea/
+*.swp
+
+# =========================
+# OS-specific
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Temporary / backup files
+# =========================
+*.tmp
+*.bak
+*.old
+
+# =========================
+# Compressed files
+# =========================
+*.zip
+*.tar
+*.gz
+*.rar
+
+# =========================
+# Azure / Cloud
+# =========================
+.azure/
