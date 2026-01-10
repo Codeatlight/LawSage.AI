@@ -1,74 +1,231 @@
 # **LawSage.AI**  
 **Empowering Legal Professionals with AI-Driven Insights**
 
-![LawSage.AI Banner](frontend/static/assets/b6e63aac-5718-49be-8a29-6cfc1562f35b.jpg)
+![LawSage.AI Banner](frontend/static/assets/banner.jpg)
  
 
----
+LawSage.AI is an end-to-end AI-powered legal assistance platform designed to automate legal document understanding, summarization, simplification, and legal research chat using modern Large Language Models (LLMs).
 
-## **About LawSage.AI**
-
-**LawSage.AI** is a cutting-edge AI-powered platform designed to simplify and revolutionize the way legal professionals interact with documents. This project was developed as an academic coursework project for *Intelligent Model Design using AI*, showcasing advanced AI techniques to streamline legal workflows:  
-- **Document Summarization**: Extract concise summaries of lengthy legal documents.  
-- **Simplified Insights**: Simplify legal jargon for better understanding.  
-- **Legal Research Assistance**: Provide answers and insights tailored to legal queries.  
-
-Whether you're a lawyer, paralegal, or student, **LawSage.AI** is your partner in navigating the complexities of the legal domain.  
-
----
-
-## **Key Features**
-- **Upload & Extract**: Upload legal documents (PDF) and extract text with ease.  
-- **Intelligent Summarization**: Generate summaries using the **Legal-Pegasus** model.  
-- **Simplification at a Click**: Create simplified summaries with the **LegalBERT-BART** model.  
-- **Research on Demand**: Use advanced legal models like **Indian Legal Assistant** to answer queries and provide structured legal insights.  
-- **User-Friendly Design**: Modern and intuitive interface built with **Flask** and responsive web technologies.  
-
----
-
-## **Tech Stack**
-
-| **Technology**      | **Usage**                        |  
-|----------------------|----------------------------------|  
-| Python              | Backend logic & AI models       |  
-| Flask               | Web framework                   |  
-| HTML/CSS/JavaScript | Frontend interface              |  
-| PyTorch & TensorFlow| Model training and integration  |  
-| Hugging Face Models | Advanced AI models for NLP      |  
-
----
-
-## **Folder Structure**
-LawSage.AI/ ├── backend/ # Backend logic and APIs ├── frontend/ # User interface │ ├── static/ # Static assets (CSS, JS) │ ├── templates/ # HTML templates ├── models/ # Pretrained AI models ├── data/ # Training datasets └── README.md # Project overview
+The system is built with performance, modularity, and deployment readiness in mind and supports multiple fast-response LLMs, dynamic model routing, and cloud-scale deployment.
 
 
----
+🚀 Key Capabilities
 
-## **How It Works**
+📄 Legal Document Upload & Processing
 
-1. **Upload a Document**: Start by uploading a legal document (PDF).  
-2. **Summarization**:  
-   - **Step 1**: Generate a detailed summary using **Legal-Pegasus**.  
-   - **Step 2**: Create a simplified version using **LegalBERT-BART** (optional).  
-3. **Legal Research Assistance**: Ask complex legal queries and receive structured answers using advanced legal AI models.  
+Supports PDF-based legal documents
 
----
+Handles both text-based and scanned documents (OCR fallback)
 
-## **Models Used**
 
-| **Model Name**                           | **Purpose**                                  |  
-|------------------------------------------|----------------------------------------------|  
-| `nsi319/legal-pegasus`                   | Legal document summarization                |  
-| `MikaSie/LegalBERT_BART_fixed_V1`        | Simplified legal summaries                  |  
-| `varma007ut/Indian_Legal_Assistant`      | General legal query resolution              |  
-| `Ayush12a/llama3.1_finetuned_on_indian_legal_dataset` | Indian law-specific queries        |  
-| `microsoft/Phi-3.5-mini-instruct`        | Natural legal language understanding         |  
+🧠 AI-Driven Legal Summarization
 
----
+Concise summaries of long legal documents
 
-## **Installation & Setup**
+Uses domain-tuned legal summarization models
 
-Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/LawSage.AI.git
-   cd LawSage.AI
+
+🗣 Legal Language Simplification
+
+Converts complex legal jargon into understandable language
+
+Ideal for non-lawyers and first-time readers
+
+
+⚡ Fast Legal Research Chat
+
+Multi-model architecture for rapid responses
+
+Optimized for latency and scalability
+
+
+☁ Production-Grade Deployment
+
+Fully deployed on a cloud VM for 24×7 availability
+
+Ready for containerization and CI/CD
+
+
+🧠 Model Architecture & Evolution
+
+⚠️ Important Note on Model Usage
+
+The project initially experimented with Microsoft Phi models
+
+These were later completely deprecated
+
+Replaced with faster, more efficient, and more scalable LLMs
+
+
+✅ Current Model Strategy
+
+⚡ Tiny & Distilled Models for ultra-fast responses
+
+🧠 LLaMA-based & Mistral-based models for reasoning-heavy tasks
+
+
+🔁 Dynamic Model Routing based on:
+
+Query complexity
+
+Response latency
+
+Token constraints
+
+![LawSage.AI ss1](frontend/static/assets/ss1.jpg)
+
+![LawSage.AI ss1](frontend/static/assets/ss2.jpg)
+
+![LawSage.AI ss1](frontend/static/assets/ss3.jpg)
+
+
+
+This architecture significantly improves speed, reliability, and production usability compared to the earlier Phi-based approach.
+
+
+🏗️ High-Level System Architecture
+User
+ │
+ ▼
+Frontend (HTML/CSS/JS)
+ │
+ ▼
+Flask API Gateway
+ │
+ ├── Document Processing Service
+ │   └── PDF Parsing + OCR
+ │
+ ├── Summarization Service
+ │   └── Legal Pegasus
+ │
+ ├── Simplification Service
+ │   └── LegalBERT-BART
+ │
+ └── Fast Chat Router
+     ├── Tiny LLMs (Low latency)
+     ├── LLaMA / Mistral Models
+     └── Response Optimizer
+ │
+ ▼
+Database (Chat History, Metadata)
+
+
+
+
+🧩 Project Structure
+
+LawSage.AI/
+├── backend/
+│   ├── app.py
+│   ├── models/
+│   │   ├── fast_chat_model.py
+│   │   ├── summarizer_model.ipynb
+│   │   └── legal_research_model.py
+│   ├── services/
+│   │   ├── document_processing/
+│   │   ├── summarization/
+│   │   ├── simplification/
+│   │   └── research_assistant/
+│   ├── migrations/
+│   └── utils/
+│
+├── frontend/
+│   ├── templates/
+│   └── static/
+│
+├── tests/
+├── uploads/
+├── instance/
+├── sqlscript.sql
+└── README.md
+
+
+⚙️ Tech Stack
+
+
+Backend
+
+Python
+
+Flask
+
+SQLAlchemy
+
+PyTorch / Transformers
+
+
+AI & NLP
+
+HuggingFace Transformers
+
+Legal-Pegasus
+
+LegalBERT-BART
+
+LLaMA-based models
+
+Distilled fast-response chat models
+
+
+Document Processing
+
+pdfplumber
+
+PyPDF2
+
+pytesseract (OCR)
+
+Pillow (PIL)
+
+
+Infrastructure
+
+Cloud Virtual Machine
+
+Environment-based configuration
+
+Deployment-ready architecture
+
+
+☁️ Cloud Deployment (24×7)
+
+LawSage.AI is fully deployed on a dedicated Virtual Machine using Microsoft Azure specifically on -
+
+http://4.187.225.163:5000
+
+enabling:
+
+✅ Always-on availability
+
+✅ Public IP access
+
+✅ Production-grade reliability
+
+✅ Future scalability (Docker / Kubernetes ready)
+
+The VM handles:
+
+Backend API
+
+Model inference
+
+Document processing
+
+Database connectivity
+
+This allows LawSage.AI to function as a real production system, not just a local demo.
+
+
+
+🛠️ Local Setup (Quick Start)
+
+git clone https://github.com/Codeatlight/LawSage.AI
+cd LawSage.AI
+python -m venv venv
+source venv/bin/activate
+pip install -r backend/requirements.txt
+python backend/app.py
+
+Open:
+http://localhost:5000
+
