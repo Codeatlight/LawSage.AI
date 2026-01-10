@@ -1,7 +1,7 @@
 # **LawSage.AI**  
 **Empowering Legal Professionals with AI-Driven Insights**
 
-![LawSage.AI Banner](frontend/static/assets/banner.jpg)
+![LawSage.AI Banner](frontend/static/assets/banner)
  
 
 LawSage.AI is an end-to-end AI-powered legal assistance platform designed to automate legal document understanding, summarization, simplification, and legal research chat using modern Large Language Models (LLMs).
