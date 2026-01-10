@@ -1,11 +1,7 @@
 # **LawSage.AI**  
 **Empowering Legal Professionals with AI-Driven Insights**
 
-<<<<<<< HEAD
-![LawSage.AI Banner](frontend/static/assets/banner)
-=======
 ![LawSage.AI Banner](frontend/static/assets/banner.png)
->>>>>>> 2b55393 (Replace README with updated project documentation)
  
 
 LawSage.AI is an end-to-end AI-powered legal assistance platform designed to automate legal document understanding, summarization, simplification, and legal research chat using modern Large Language Models (LLMs).
@@ -13,44 +9,52 @@ LawSage.AI is an end-to-end AI-powered legal assistance platform designed to aut
 The system is built with performance, modularity, and deployment readiness in mind and supports multiple fast-response LLMs, dynamic model routing, and cloud-scale deployment.
 
 
+
 🚀 Key Capabilities
+
 
 📄 Legal Document Upload & Processing
 
-Supports PDF-based legal documents
+	Supports PDF-based legal documents
 
-Handles both text-based and scanned documents (OCR fallback)
+	Handles both text-based and scanned documents (OCR fallback)
+
 
 
 🧠 AI-Driven Legal Summarization
 
-Concise summaries of long legal documents
+	Concise summaries of long legal documents
 
-Uses domain-tuned legal summarization models
+	Uses domain-tuned legal summarization models
+
 
 
 🗣 Legal Language Simplification
 
-Converts complex legal jargon into understandable language
+	Converts complex legal jargon into understandable language
 
-Ideal for non-lawyers and first-time readers
+	Ideal for non-lawyers and first-time readers
+
 
 
 ⚡ Fast Legal Research Chat
 
-Multi-model architecture for rapid responses
+	Multi-model architecture for rapid responses
 
-Optimized for latency and scalability
+	Optimized for latency and scalability
+
 
 
 ☁ Production-Grade Deployment
 
-Fully deployed on a cloud VM for 24×7 availability
+	Fully deployed on a cloud VM for 24×7 availability
 
-Ready for containerization and CI/CD
+	Ready for containerization and CI/CD
+
 
 
 🧠 Model Architecture & Evolution
+
 
 ⚠️ Important Note on Model Usage
 
@@ -61,6 +65,7 @@ These were later completely deprecated
 Replaced with faster, more efficient, and more scalable LLMs
 
 
+
 ✅ Current Model Strategy
 
 ⚡ Tiny & Distilled Models for ultra-fast responses
@@ -68,19 +73,26 @@ Replaced with faster, more efficient, and more scalable LLMs
 🧠 LLaMA-based & Mistral-based models for reasoning-heavy tasks
 
 
+
 🔁 Dynamic Model Routing based on:
 
-Query complexity
+	Query complexity
 
-Response latency
+	Response latency
 
-Token constraints
+	Token constraints
+
 
 ![LawSage.AI ss1](frontend/static/assets/ss1.jpg)
 
+
+
 ![LawSage.AI ss1](frontend/static/assets/ss2.jpg)
 
+
+
 ![LawSage.AI ss1](frontend/static/assets/ss3.jpg)
+
 
 
 
@@ -88,31 +100,29 @@ This architecture significantly improves speed, reliability, and production usab
 
 
 🏗️ High-Level System Architecture
-User
- │
- ▼
-Frontend (HTML/CSS/JS)
- │
- ▼
-Flask API Gateway
- │
- ├── Document Processing Service
- │   └── PDF Parsing + OCR
- │
- ├── Summarization Service
- │   └── Legal Pegasus
- │
- ├── Simplification Service
- │   └── LegalBERT-BART
- │
- └── Fast Chat Router
-     ├── Tiny LLMs (Low latency)
-     ├── LLaMA / Mistral Models
-     └── Response Optimizer
- │
- ▼
-Database (Chat History, Metadata)
 
+
+User
+│
+▼ Frontend (HTML / CSS / JS)
+│
+▼ Flask API Gateway
+│
+├── Document Processing Service
+│ ├── PDF Parsing + OCR
+│
+├── Summarization Service
+│ └── Legal Pegasus
+│
+├── Simplification Service
+│ └── LegalBERT-BART
+│
+├── Fast Chat Router
+│ ├── Tiny LLMs (Low latency)
+│ └── LLaMA / Mistral Models
+│
+└── Database
+└── Chat History, Metadata
 
 
 
@@ -120,22 +130,22 @@ Database (Chat History, Metadata)
 
 LawSage.AI/
 ├── backend/
-│   ├── app.py
-│   ├── models/
-│   │   ├── fast_chat_model.py
-│   │   ├── summarizer_model.ipynb
-│   │   └── legal_research_model.py
-│   ├── services/
-│   │   ├── document_processing/
-│   │   ├── summarization/
-│   │   ├── simplification/
-│   │   └── research_assistant/
-│   ├── migrations/
-│   └── utils/
+│ ├── app.py
+│ ├── models/
+│ │ ├── fast_chat_model.py
+│ │ ├── summarizer_model.ipynb
+│ │ └── legal_research_model.py
+│ ├── services/
+│ │ ├── document_processing/
+│ │ ├── summarization/
+│ │ ├── simplification/
+│ │ └── research_assistant/
+│ ├── migrations/
+│ └── utils/
 │
 ├── frontend/
-│   ├── templates/
-│   └── static/
+│ ├── templates/
+│ └── static/
 │
 ├── tests/
 ├── uploads/
@@ -158,7 +168,10 @@ SQLAlchemy
 PyTorch / Transformers
 
 
+
+
 AI & NLP
+
 
 HuggingFace Transformers
 
@@ -171,7 +184,10 @@ LLaMA-based models
 Distilled fast-response chat models
 
 
+
+
 Document Processing
+
 
 pdfplumber
 
@@ -182,7 +198,10 @@ pytesseract (OCR)
 Pillow (PIL)
 
 
+
+
 Infrastructure
+
 
 Cloud Virtual Machine
 
@@ -191,11 +210,17 @@ Environment-based configuration
 Deployment-ready architecture
 
 
+
+
 ☁️ Cloud Deployment (24×7)
+
+
 
 LawSage.AI is fully deployed on a dedicated Virtual Machine using Microsoft Azure specifically on -
 
+
 http://4.187.225.163:5000
+
 
 enabling:
 
@@ -207,6 +232,7 @@ enabling:
 
 ✅ Future scalability (Docker / Kubernetes ready)
 
+
 The VM handles:
 
 Backend API
@@ -217,11 +243,14 @@ Document processing
 
 Database connectivity
 
+
 This allows LawSage.AI to function as a real production system, not just a local demo.
 
 
 
+
 🛠️ Local Setup (Quick Start)
+
 
 git clone https://github.com/Codeatlight/LawSage.AI
 cd LawSage.AI
@@ -229,6 +258,7 @@ python -m venv venv
 source venv/bin/activate
 pip install -r backend/requirements.txt
 python backend/app.py
+
 
 Open:
 http://localhost:5000
