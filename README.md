@@ -123,11 +123,12 @@ User
 │
 └── Database
     └── Chat History, Metadata
+```
 
 
+##🧩 Project Structure
 
-🧩 Project Structure
-
+```text
 LawSage.AI/
 ├── backend/
 │ ├── app.py
@@ -152,7 +153,7 @@ LawSage.AI/
 ├── instance/
 ├── sqlscript.sql
 └── README.md
-
+```
 
 ⚙️ Tech Stack
 
