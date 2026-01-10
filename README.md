@@ -99,9 +99,9 @@ Replaced with faster, more efficient, and more scalable LLMs
 This architecture significantly improves speed, reliability, and production usability compared to the earlier Phi-based approach.
 
 
-🏗️ High-Level System Architecture
+## 🏗 High-Level System Architecture
 
-
+```text
 User
 │
 ▼ Frontend (HTML / CSS / JS)
@@ -109,20 +109,20 @@ User
 ▼ Flask API Gateway
 │
 ├── Document Processing Service
-│ ├── PDF Parsing + OCR
+│   ├── PDF Parsing + OCR
 │
 ├── Summarization Service
-│ └── Legal Pegasus
+│   └── Legal Pegasus
 │
 ├── Simplification Service
-│ └── LegalBERT-BART
+│   └── LegalBERT-BART
 │
 ├── Fast Chat Router
-│ ├── Tiny LLMs (Low latency)
-│ └── LLaMA / Mistral Models
+│   ├── Tiny LLMs (Low latency)
+│   └── LLaMA / Mistral Models
 │
 └── Database
-└── Chat History, Metadata
+    └── Chat History, Metadata
 
 
 
