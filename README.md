@@ -252,13 +252,14 @@ This allows LawSage.AI to function as a real production system, not just a local
 
 🛠️ Local Setup (Quick Start)
 
-
+```
 git clone https://github.com/Codeatlight/LawSage.AI
 cd LawSage.AI
 python -m venv venv
 source venv/bin/activate
 pip install -r backend/requirements.txt
 python backend/app.py
+```
 
 
 Open:
