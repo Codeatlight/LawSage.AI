@@ -83,15 +83,15 @@ Replaced with faster, more efficient, and more scalable LLMs
 	Token constraints
 
 
-![LawSage.AI ss1](frontend/static/assets/ss1.jpg)
+![LawSage.AI ss1](frontend/static/assets/ss1.png)
 
 
 
-![LawSage.AI ss1](frontend/static/assets/ss2.jpg)
+![LawSage.AI ss1](frontend/static/assets/ss2.png)
 
 
 
-![LawSage.AI ss1](frontend/static/assets/ss3.jpg)
+![LawSage.AI ss1](frontend/static/assets/ss3.png)
 
 
 
